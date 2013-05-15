@@ -1,0 +1,6 @@
+#!/bin/bash
+SUCCESS=$(i3-msg "move workspace number $1")
+if echo "$SUCCESS" | grep -q "false"
+then
+	i3-msg "move workspace $1"
+fi
